@@ -1,0 +1,11 @@
+services:
+  linux-automation-toolkit:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: linux-automation-toolkit
+    tty: true
+    stdin_open: true
+    working_dir: /app
+    volumes:
+      - ./scripts:/app/scripts
